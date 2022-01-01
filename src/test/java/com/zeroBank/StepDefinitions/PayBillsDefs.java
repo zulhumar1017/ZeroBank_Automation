@@ -57,11 +57,14 @@ public class PayBillsDefs {
         String actualMessage = payBillsPage.message.getText();// 重要！！ option +Enter ile commend verdim，
         // 是先写的右边 ，再按短按键 就形成了这个 ！！！！！！！！！
         Assert.assertEquals(expectedMessage,actualMessage);
+
+        System.out.println("123");
     }
 
 
     @Then("verify that the system not display {string} message")
     public void verifyThatTheSystemNotDisplayMessage(String expectedMessage) {
         Assert.assertFalse(payBillsPage.message.isDisplayed());
+        System.out.println("Nur");
     }
 }
